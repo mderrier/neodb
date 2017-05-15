@@ -88,7 +88,7 @@ class NeoTestDBPrivate {
                 options = { shell: true };
             }
             this.resolve = resolve;
-            this.cleanup();
+            //this.cleanup();
             try {
                 require('fs').chmodSync(this.getServerBin(), '755');
                 this.instance = require('child_process').spawn(this.getServerBin(), ['console'], options);
@@ -126,7 +126,7 @@ class NeoTestDBPrivate {
         return new Promise((resolve) => {
 
             this.resolve = resolve;
-
+            //this.cleanup()
             if (this.isWin()) {
                 this.instance.kill('SIGTERM');
             }
