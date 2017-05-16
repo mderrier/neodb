@@ -164,7 +164,7 @@ class NeoTestDBPrivate {
 
     instanceClosed() {
 
-        this.cleanup();
+        //this.cleanup();
     }
 
 }
